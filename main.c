@@ -5,21 +5,27 @@
 
 int main(int argc, char *argv[]) 
 {
-	int i;
-	int a;//절대값을 저장하는 변 
+	char c;
 	
-	printf("Input an integer : ");
-	scanf("%d", &i);
+	printf("Input a char : ");
+	scanf("%c", &c);
 	
-	if (i>0)
+	if ('A'<=c && c<='Z')
 	{
-		a=i;
+		printf("대문자입니다.");
 	 } 
-    else
+    else if ('a'<=c && c<='z')
 	{
-		a=-i;
+		printf("소문자입니다.");
+	}
+	else if ('0'<=c && c<='9')
+	{
+		printf("숫자입니다.");
+	}
+	else
+	{
+		printf("기타글자 입니다.");
 	}
 	
-	printf("절대값은 %i 입니다.", a);
 	return 0;
 }
